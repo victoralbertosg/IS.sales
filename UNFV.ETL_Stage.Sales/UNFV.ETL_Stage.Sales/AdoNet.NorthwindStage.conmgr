@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AdoNet NorthwindStage"
+  DTS:DTSID="{450EC717-DDE3-4E19-9AB9-D97FD9BDC87E}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=JAV05JLINFVSOTO;Initial Catalog=NorthwindStage;Integrated Security=True;Application Name=SSIS-UNFV.ETL_Stage.Sales-{450EC717-DDE3-4E19-9AB9-D97FD9BDC87E}JAV05JLINFVSOTO.NorthwindStage1;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
