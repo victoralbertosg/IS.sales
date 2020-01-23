@@ -10,13 +10,21 @@ import {ClienteService} from './clientes/cliente.service';
 import {RouterModule, Routes} from '@angular/router'
 import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './clientes/form.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
+import { CustomersListComponent } from './customer/customers-list/customers-list.component';
+import { SearchCustomersComponent } from './customer/search-customers/search-customers.component'
 
 const routes:Routes=[
   {path:'',redirectTo:'/clientes',pathMatch:'full'},
   {path:'directivas',component:DirectivaComponent},
   {path:'clientes',component:ClientesComponent},
-  {path:'clientes/form',component:FormComponent}
+  {path:'clientes/form',component:FormComponent},  
+  {path:'clientes/form/:id',component:FormComponent},  
+  { path: 'customer', component: CustomersListComponent },
+  { path: 'add', component: CreateCustomerComponent },
+  { path: 'findbyage', component: SearchCustomersComponent },
 
 ]
 
@@ -27,7 +35,11 @@ const routes:Routes=[
     FooterComponent,
     DirectivaComponent,
     ClientesComponent,
-    FormComponent
+    FormComponent,
+    CreateCustomerComponent,
+    CustomerDetailsComponent,
+    CustomersListComponent,
+    SearchCustomersComponent
   ],
   imports: [    
     BrowserModule,
