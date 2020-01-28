@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "UNFV.ETL_DmSales", "UNFV.ETL_DmSales\UNFV.ETL_DmSales.dtproj", "{4B07E5C8-DD50-47E1-9E89-F9B21C966BEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B07E5C8-DD50-47E1-9E89-F9B21C966BEF}.Development|Default.ActiveCfg = Development
+		{4B07E5C8-DD50-47E1-9E89-F9B21C966BEF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DF6A0CE-AC72-401D-9B95-40588079EDC0}
+	EndGlobalSection
+EndGlobal
