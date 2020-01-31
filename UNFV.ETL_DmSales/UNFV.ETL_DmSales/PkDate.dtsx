@@ -5,20 +5,20 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="JAV05JLINFVSOTO"
   DTS:CreatorName="JAV05JLINFVSOTO\PJUDICIAL"
-  DTS:DTSID="{B2F56135-86D6-487A-9E99-3FCCCAA50115}"
+  DTS:DTSID="{7A47A7A7-780C-482A-B94E-894CD2205979}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.3002.106"
   DTS:LocaleID="3082"
-  DTS:ObjectName="PkProvider"
+  DTS:ObjectName="PkDate"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{19DB0973-784A-41E6-91F1-D2C57A24F145}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{8D7C736E-CF06-43BE-B08C-1D3D96974E7D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F4AFC024-8E45-4772-B3C8-248EA8164DC4}"
+      DTS:DTSID="{BE232B0E-6D26-481D-B173-FF51B34A3C24}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="AuditKey">
@@ -27,16 +27,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{B506D525-ACEC-46EA-8DEA-F18F674B6723}"
+      DTS:DTSID="{6ED9FC65-BF34-41FC-B0AD-270F453AF7CB}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ErrorPath">
       <DTS:VariableValue
-        DTS:DataType="8">c:\loadprovider.raw</DTS:VariableValue>
+        DTS:DataType="8">c:\loadtime.raw</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{DF175B4F-A18F-40AC-AB38-A7929AA578D3}"
+      DTS:DTSID="{79E01D3F-DD7C-4C77-8593-1DD6709153C7}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ExtractStartDate">
@@ -45,16 +45,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{88335B12-A5A3-4320-BC54-EB66860935BB}"
+      DTS:DTSID="{48E44E6E-9390-4E0A-98F6-3B7C35F00B3D}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ExtractStopDate">
       <DTS:VariableValue
-        DTS:DataType="7">1/23/2020 12:10:32 PM</DTS:VariableValue>
+        DTS:DataType="7">1/23/2020 12:10:00 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{D2E1BACF-A1E6-446C-A3BC-4E583FCADB29}"
+      DTS:DTSID="{174CACA2-3AFB-4355-80A4-22489F5084EB}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ParentAuditKey">
@@ -63,16 +63,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0C87C1F6-810E-4374-B68F-EB70384ED5F6}"
+      DTS:DTSID="{CAFBFB7D-85F1-4EC7-A40D-CA0F55573B5A}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="PkName">
       <DTS:VariableValue
-        DTS:DataType="8">EmployeeKey</DTS:VariableValue>
+        DTS:DataType="8">timeKey</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C384A4C0-F680-4B92-A30E-A5640A40DB67}"
+      DTS:DTSID="{FA3AF531-4626-4034-9890-062C3D68FF21}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RC_Error">
@@ -81,7 +81,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0D58AFAC-6D01-43B4-85DE-947EB845BDB9}"
+      DTS:DTSID="{21AFAE87-B5D3-441A-BCB5-194C2E9E0026}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RC_Normal">
@@ -90,7 +90,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0C34C716-6C6A-45D1-B41F-132E514E61F3}"
+      DTS:DTSID="{ACD588F8-D97C-4403-B799-8851C731502A}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RC_Xtrct">
@@ -99,7 +99,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6F6A9D0D-403B-46A4-986C-8362A5190ED0}"
+      DTS:DTSID="{A12C762E-635A-4062-BC1A-44BDE1D66EB8}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RowCount">
@@ -108,12 +108,12 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{48DE0676-3F08-47F4-B870-EE3B9F3C353D}"
+      DTS:DTSID="{9C584870-FB75-4620-9ABF-EA1477065E34}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="TableName">
       <DTS:VariableValue
-        DTS:DataType="8">DimEmployee</DTS:VariableValue>
+        DTS:DataType="8">DimTime</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -121,7 +121,7 @@
       DTS:refId="Package\AuditKey"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{B55D099F-49F7-48F5-98E3-5CB45DFC6843}"
+      DTS:DTSID="{F1A6AC02-399B-493F-B57E-E1696BC15892}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="AuditKey"
@@ -197,7 +197,7 @@
       DTS:refId="Package\Delete"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{B8C6BA83-92E1-46E2-8806-16E1EB63B056}"
+      DTS:DTSID="{6E293216-25EA-4980-AF81-F6A26770643F}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Delete"
@@ -207,14 +207,14 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
-          SQLTask:SqlStatementSource="DELETE FROM  DimEmployee WHERE employeeKey &gt;= 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM  DimTime WHERE timeKey &gt;= 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Individual Cutomers"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{426DB108-4EA1-4FAC-B9F2-6101AC0431A0}"
+      DTS:DTSID="{C6989D11-68B9-4058-BE9C-3A8B220B4C7C}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Individual Cutomers"
@@ -225,11 +225,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Individual Cutomers\Bulk load DimCustomer"
+              refId="Package\Individual Cutomers\Bulk load DimTime"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Bulk load DimCustomer"
+              name="Bulk load DimTime"
               usesDispositions="true"
               version="4">
               <properties>
@@ -240,7 +240,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[DimEmployee]</property>
+                  name="OpenRowset">[dbo].[DimTime]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -282,7 +282,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Connections[OleDbConnection]"
+                  refId="Package\Individual Cutomers\Bulk load DimTime.Connections[OleDbConnection]"
                   connectionManagerID="{1D3C2A40-CBBB-4C2C-979C-50C9E7F7B8E1}:external"
                   connectionManagerRefId="Project.ConnectionManagers[OleDb NorthwindDataMart]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -290,242 +290,156 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="60"
-                      cachedName="Address"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Address]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Address]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[City]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Region"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Region]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Country"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Country]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[employeeID]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[trimesterconv]"
                       cachedDataType="i4"
-                      cachedName="employeeID"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[employeeID]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[employeeID]" />
+                      cachedName="trimesterconv"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[trimester]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[trimesterconv]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[LastName]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="LastName"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[LastName]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[FirstName]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="FirstName"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[FirstName]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Title]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="Title"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Title]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Title]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[BirthDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="BirthDate"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[BirthDate]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[BirthDate]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[HireDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="HireDate"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[HireDate]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HireDate]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[HomePhone]"
-                      cachedDataType="wstr"
-                      cachedLength="24"
-                      cachedName="HomePhone"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[HomePhone]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HomePhone]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[PostalCode]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[PostalCode]" />
-                    <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowlsCurrent]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[RowlsCurrent]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="RowlsCurrent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowlsCurrent]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowStartDate]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[RowStartDate]"
                       cachedDataType="dbDate"
                       cachedName="RowStartDate"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowStartDate]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowEndDate]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[RowEndDate]"
                       cachedDataType="dbDate"
                       cachedName="RowEndDate"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowEndDate]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowChangeReason]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[RowChangeReason]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="RowChangeReason"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowChangeReason]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[InsertAuditKey]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[InsertAuditKey]"
                       cachedDataType="i4"
                       cachedName="InsertAuditKey"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[InsertAuditKey]" />
                     <inputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[UpdateAuditKey]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[UpdateAuditKey]"
                       cachedDataType="i4"
                       cachedName="UpdateAuditKey"
-                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
                       lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[UpdateAuditKey]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[dateDT]"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[yearDT]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[month]"
+                      cachedDataType="i4"
+                      cachedName="month"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[monthDT]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[month]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].Columns[day]"
+                      cachedDataType="i4"
+                      cachedName="day"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[dayDT]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[day]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Address]"
-                      dataType="wstr"
-                      length="60"
-                      name="Address" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[City]"
-                      dataType="wstr"
-                      length="15"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="15"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="10"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Country]"
-                      dataType="wstr"
-                      length="15"
-                      name="Country" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[employeeKey]"
-                      dataType="i4"
-                      name="employeeKey" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[employeeID]"
-                      dataType="i4"
-                      name="employeeID" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      dataType="wstr"
-                      length="20"
-                      name="LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      dataType="wstr"
-                      length="10"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Title]"
-                      dataType="wstr"
-                      length="30"
-                      name="Title" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[BirthDate]"
-                      dataType="dbTimeStamp"
-                      name="BirthDate" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[HireDate]"
-                      dataType="dbTimeStamp"
-                      name="HireDate" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[HomePhone]"
-                      dataType="wstr"
-                      length="24"
-                      name="HomePhone" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
                       dataType="wstr"
                       length="1"
                       name="RowIsCurrent" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
                       dataType="dbDate"
                       name="RowStartDate" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
                       dataType="dbDate"
                       name="RowEndDate" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
                       dataType="wstr"
                       length="200"
                       name="RowChangeReason" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
                       dataType="i4"
                       name="InsertAuditKey" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
                       dataType="i4"
                       name="UpdateAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[TimeKey]"
+                      dataType="i4"
+                      name="TimeKey" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[trimester]"
+                      dataType="i4"
+                      name="trimester" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[dateDT]"
+                      dataType="dbTimeStamp"
+                      name="dateDT" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[yearDT]"
+                      dataType="i4"
+                      name="yearDT" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[monthDT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="monthDT" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB].ExternalColumns[dayDT]"
+                      dataType="i4"
+                      name="dayDT" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Individual Cutomers\Bulk load DimTime.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Individual Cutomers\Bulk load DimTime.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Individual Cutomers\Bulk load DimTime.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Individual Cutomers\Bulk load DimTime.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -534,73 +448,149 @@
               </outputs>
             </component>
             <component
-              refId="Package\Individual Cutomers\Fix Null"
+              refId="Package\Individual Cutomers\Conversion"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
-              name="Fix Null"
+              name="Conversion"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Individual Cutomers\Fix Null.Inputs[Entrada de columna derivada]"
+                  refId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]"
                   description="Entrada en la transformación Columna derivada"
                   name="Entrada de columna derivada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Individual Cutomers\Fix Null.Inputs[Entrada de columna derivada].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Region"
-                      errorOrTruncationOperation="Cálculo"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión de columna derivada"
-                          name="Expression">[ISNULL](#{Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]}) ? "no mumber" : #{Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión descriptiva de columna derivada"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(Region) ? "no mumber" : Region</property>
-                      </properties>
-                    </inputColumn>
+                      refId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada].Columns[trimester]"
+                      cachedDataType="i4"
+                      cachedName="trimester"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[trimester]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Individual Cutomers\Fix Null.Outputs[Salida de columna derivada]"
+                  refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada]"
                   description="Salida predeterminada de la transformación Columna derivada"
                   exclusionGroup="1"
                   name="Salida de columna derivada"
-                  synchronousInputId="Package\Individual Cutomers\Fix Null.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[YEAR](#{Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">YEAR(Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[month]"
+                      name="month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[MONTH](#{Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MONTH(Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[day]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[day]"
+                      name="day"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[DAY](#{Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DAY(Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[trimesterconv]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[trimesterconv]"
+                      name="trimesterconv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_I4)#{Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[trimester]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)trimester</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Individual Cutomers\Fix Null.Outputs[Salida de error de columna derivada]"
+                  refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada]"
                   description="Salida de error de la transformación Columna derivada"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de columna derivada"
-                  synchronousInputId="Package\Individual Cutomers\Fix Null.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Individual Cutomers\Fix Null.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Fix Null.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Individual Cutomers\Fix Null.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Fix Null.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -794,40 +784,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Individual Cutomers\RowCount"
-              componentClassID="Microsoft.RowCount"
-              contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
-              description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
-              name="RowCount">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el recuento de filas."
-                  name="VariableName">User::RC_Xtrct</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]"
-                  hasSideEffects="true"
-                  name="Entrada de Recuento de filas 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Individual Cutomers\RowCount.Outputs[Salida de Recuento de filas 1]"
-                  name="Salida de Recuento de filas 1"
-                  synchronousInputId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Individual Cutomers\Stage Customer"
+              refId="Package\Individual Cutomers\Stage time"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
-              name="Stage Customer"
+              name="Stage time"
               usesDispositions="true"
               version="7">
               <properties>
@@ -847,19 +808,15 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TOP (1000) [employeeID]
-      ,[LastName]
-      ,[FirstName]
-      ,[Title]
-      ,[BirthDate]
-      ,[HireDate]
-      ,[Address]
-      ,[City]
-      ,[Region]
-      ,[PostalCode]
-      ,[Country]
-      ,[HomePhone]
-  FROM [NorthwindStage].[dbo].[StageEmployee]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT distinct [Date]	
+,CASE 
+    WHEN DATEPART (MONTH, Date) BETWEEN 1 AND 3 THEN 1 
+    WHEN DATEPART (MONTH, Date) BETWEEN 4 AND 6 THEN 2
+    WHEN DATEPART (MONTH, Date) BETWEEN 7 AND 9 THEN 3
+    WHEN DATEPART (MONTH, Date) BETWEEN 10 AND 12 THEN 4
+END as trimester
+FROM [NorthwindStage].[dbo].[StageOrder]
+order by [Date]</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -884,280 +841,73 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Individual Cutomers\Stage Customer.Connections[OleDbConnection]"
-                  connectionManagerID="{1D3C2A40-CBBB-4C2C-979C-50C9E7F7B8E1}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[OleDb NorthwindDataMart]"
+                  refId="Package\Individual Cutomers\Stage time.Connections[OleDbConnection]"
+                  connectionManagerID="{66490AB6-C20B-45F3-A526-14A8D5F83820}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OleDb NorthwindStage]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB]"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Address]"
-                      dataType="wstr"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Address]"
-                      length="60"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Address]"
-                      name="Address"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].ExternalColumns[Date]"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[Date]"
+                      name="Date"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[City]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[City]"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[City]"
-                      name="City"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Region]"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Region]"
-                      name="Region"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[PostalCode]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[PostalCode]"
-                      length="10"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[PostalCode]"
-                      name="PostalCode"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Country]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Country]"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Country]"
-                      name="Country"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[employeeID]"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[trimester]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[employeeID]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[employeeID]"
-                      name="employeeID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      length="20"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      name="LastName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      length="10"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Title]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Title]"
-                      length="30"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[Title]"
-                      name="Title"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[BirthDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[BirthDate]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[BirthDate]"
-                      name="BirthDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HireDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[HireDate]"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HireDate]"
-                      name="HireDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HomePhone]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[HomePhone]"
-                      length="24"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].Columns[HomePhone]"
-                      name="HomePhone"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].ExternalColumns[trimester]"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].Columns[trimester]"
+                      name="trimester"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Address]"
-                      dataType="wstr"
-                      length="60"
-                      name="Address" />
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
                     <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[City]"
-                      dataType="wstr"
-                      length="15"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="15"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="10"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Country]"
-                      dataType="wstr"
-                      length="15"
-                      name="Country" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[employeeID]"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB].ExternalColumns[trimester]"
                       dataType="i4"
-                      name="employeeID" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      dataType="wstr"
-                      length="20"
-                      name="LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      dataType="wstr"
-                      length="10"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[Title]"
-                      dataType="wstr"
-                      length="30"
-                      name="Title" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[BirthDate]"
-                      dataType="dbTimeStamp"
-                      name="BirthDate" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[HireDate]"
-                      dataType="dbTimeStamp"
-                      name="HireDate" />
-                    <externalMetadataColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB].ExternalColumns[HomePhone]"
-                      dataType="wstr"
-                      length="24"
-                      name="HomePhone" />
+                      name="trimester" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[employeeID]"
-                      dataType="i4"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[employeeID]"
-                      name="employeeID" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      name="LastName" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Title]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Title]"
-                      name="Title" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[BirthDate]"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[Date]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[BirthDate]"
-                      name="BirthDate" />
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[Date]"
+                      name="Date" />
                     <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[HireDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[HireDate]"
-                      name="HireDate" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Address]"
-                      dataType="wstr"
-                      length="60"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Address]"
-                      name="Address" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[City]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[City]"
-                      name="City" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Region]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Region]"
-                      name="Region" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[PostalCode]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[PostalCode]"
-                      name="PostalCode" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Country]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[Country]"
-                      name="Country" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[HomePhone]"
-                      dataType="wstr"
-                      length="24"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[HomePhone]"
-                      name="HomePhone" />
-                    <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[trimester]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[trimester]"
+                      name="trimester" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Individual Cutomers\Stage time.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1171,22 +921,17 @@
               refId="Package\Individual Cutomers.Paths[Salida de columna derivada]"
               endId="Package\Individual Cutomers\Row Metadata.Inputs[Entrada de columna derivada]"
               name="Salida de columna derivada"
-              startId="Package\Individual Cutomers\Fix Null.Outputs[Salida de columna derivada]" />
+              startId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Individual Cutomers.Paths[Salida de columna derivada1]"
-              endId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]"
+              endId="Package\Individual Cutomers\Bulk load DimTime.Inputs[Entrada de destino de OLE DB]"
               name="Salida de columna derivada"
               startId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Individual Cutomers.Paths[Salida de origen de OLE DB]"
-              endId="Package\Individual Cutomers\Fix Null.Inputs[Entrada de columna derivada]"
+              endId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
-              startId="Package\Individual Cutomers\Stage Customer.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\Individual Cutomers.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]"
-              name="Salida de Recuento de filas 1"
-              startId="Package\Individual Cutomers\RowCount.Outputs[Salida de Recuento de filas 1]" />
+              startId="Package\Individual Cutomers\Stage time.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1195,7 +940,7 @@
       DTS:refId="Package\PostRowCount"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{750C509A-5292-4AA8-8FC3-AA9C9D6C9424}"
+      DTS:DTSID="{DB02CD7A-8D7B-43CA-877C-51DA788F7310}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="PostRowCount"
@@ -1205,7 +950,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
-          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimCustomer"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimTime"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -1217,7 +962,7 @@
       DTS:refId="Package\RowCnt"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{950B7F3A-3B82-43ED-A5FD-A0C9B9BEF646}"
+      DTS:DTSID="{52B32DC4-4A5D-4A60-ACEB-31948CFD15AB}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="RowCnt"
@@ -1227,7 +972,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
-          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimEmployee"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimTime"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -1239,7 +984,7 @@
       DTS:refId="Package\Tarea Ejecutar SQL"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{600CBF26-F8F9-4FF3-94CD-17649FF5E00D}"
+      DTS:DTSID="{1178E05B-6DD1-477A-AA1B-236950AE33DA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tarea Ejecutar SQL"
@@ -1282,7 +1027,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{7F96C24C-D495-4D05-849D-7C71D8EB050F}"
+      DTS:DTSID="{09DA05B5-D890-45B5-87A1-30ADACE65C10}"
       DTS:From="Package\RowCnt"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1290,7 +1035,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{B4F494E5-5EA3-49C3-ADD5-5FEFFDA7B197}"
+      DTS:DTSID="{FBC4E742-18F7-4E27-ACFE-3657D6FC4156}"
       DTS:From="Package\Delete"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1298,7 +1043,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{C9AE833B-729B-4774-9F1F-F147CDA4DD44}"
+      DTS:DTSID="{F9DEDE7F-2360-45B8-8F3B-59372AAB6E42}"
       DTS:From="Package\AuditKey"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -1306,7 +1051,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{D9A4D1CA-C994-4304-8BD8-A59B3756C0C8}"
+      DTS:DTSID="{EA889764-B34C-4A0E-BA26-CB90B389723B}"
       DTS:From="Package\Individual Cutomers"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
@@ -1314,7 +1059,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{37CFCAC2-6486-4CC6-B45D-991178E7FE58}"
+      DTS:DTSID="{60DEB970-1FFD-44AD-9EF5-6CBC5767AB4D}"
       DTS:From="Package\PostRowCount"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
@@ -1521,121 +1266,49 @@
     design-time-name="Package\Individual Cutomers">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Individual Cutomers\Stage Customer"
-          TopLeft="73,44" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="146,42"
           Id="Package\Individual Cutomers\Row Metadata"
-          TopLeft="89,192" />
+          TopLeft="198,203" />
         <NodeLayout
-          Size="114,42"
-          Id="Package\Individual Cutomers\Fix Null"
-          TopLeft="105,132" />
+          Size="130,42"
+          Id="Package\Individual Cutomers\Stage time"
+          TopLeft="73,44" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\Individual Cutomers\RowCount"
-          TopLeft="118,259" />
+          Size="167,42"
+          Id="Package\Individual Cutomers\Bulk load DimTime"
+          TopLeft="137,294" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Individual Cutomers\Bulk load DimCustomer"
-          TopLeft="97,330" />
-        <EdgeLayout
-          Id="Package\Individual Cutomers.Paths[Salida de columna derivada]"
-          TopLeft="105,153">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16,60"
-              Start="0,0"
-              End="-23.5,60">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-34.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.5,0"
-                    Point2="-38.5,0"
-                    Point3="-38.5,4" />
-                  <mssgle:LineSegment
-                    End="-38.5,56" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-38.5,56"
-                    Point2="-38.5,60"
-                    Point3="-34.5,60" />
-                  <mssgle:LineSegment
-                    End="-23.5,60" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Individual Cutomers.Paths[Salida de Recuento de filas 1]"
-          TopLeft="181.5,301">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10,29"
-              Start="0,0"
-              End="10,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.5"
-                    Point2="0,14.5"
-                    Point3="4,14.5" />
-                  <mssgle:LineSegment
-                    End="6,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6,14.5"
-                    Point2="10,14.5"
-                    Point3="10,18.5" />
-                  <mssgle:LineSegment
-                    End="10,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="131,42"
+          Id="Package\Individual Cutomers\Conversion"
+          TopLeft="213,134" />
         <EdgeLayout
           Id="Package\Individual Cutomers.Paths[Salida de origen de OLE DB]"
-          TopLeft="150,86">
+          TopLeft="138,86">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12,46"
+              EndConnector="140.5,48"
               Start="0,0"
-              End="12,38.5">
+              End="140.5,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
+                    End="0,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
                   <mssgle:LineSegment
-                    End="8,23" />
+                    End="136.5,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="8,23"
-                    Point2="12,23"
-                    Point3="12,27" />
+                    Point1="136.5,24"
+                    Point2="140.5,24"
+                    Point3="140.5,28" />
                   <mssgle:LineSegment
-                    End="12,38.5" />
+                    End="140.5,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1646,30 +1319,52 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Individual Cutomers.Paths[Salida de columna derivada1]"
-          TopLeft="162,234">
+          TopLeft="271,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.5,25"
+              EndConnector="-50.5,49"
               Start="0,0"
-              End="19.5,17.5">
+              End="-50.5,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.5" />
+                    End="0,20.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="-4,24.5" />
                   <mssgle:LineSegment
-                    End="15.5,12.5" />
+                    End="-46.5,24.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.5,12.5"
-                    Point2="19.5,12.5"
-                    Point3="19.5,16.5" />
+                    Point1="-46.5,24.5"
+                    Point2="-50.5,24.5"
+                    Point3="-50.5,28.5" />
                   <mssgle:LineSegment
-                    End="19.5,17.5" />
+                    End="-50.5,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de columna derivada]"
+          TopLeft="274.75,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1682,7 +1377,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Individual Cutomers\Stage Customer">
+    design-time-name="Package\Individual Cutomers\Stage time">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1690,7 +1385,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Individual Cutomers\Bulk load DimCustomer">
+    design-time-name="Package\Individual Cutomers\Bulk load DimTime">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

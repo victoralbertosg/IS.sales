@@ -1,0 +1,1713 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/23/2020 10:08:58 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JAV05JLINFVSOTO"
+  DTS:CreatorName="JAV05JLINFVSOTO\PJUDICIAL"
+  DTS:DTSID="{5E4137BB-CFEE-4B80-8C1B-58C57A829764}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.106"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="PkProduct"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{89652E77-FBD7-442D-8C53-2C9A7434AED6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E5F7DAC1-8A00-4895-90E6-FCA1CE884A69}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4E236E39-E4C1-46F8-969E-10A55F8C9132}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorPath">
+      <DTS:VariableValue
+        DTS:DataType="8">c:\loadproduct.raw</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{41A2391C-2288-4583-B074-F0F028EAC2AC}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractStartDate">
+      <DTS:VariableValue
+        DTS:DataType="7">12:00:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B2478915-096E-4F53-9350-B3C5566D0317}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractStopDate">
+      <DTS:VariableValue
+        DTS:DataType="7">1/23/2020 12:10:00 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DA6DD233-A6DB-43EC-8C4C-ABC08A5B436C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AFFC8674-FF51-408D-A6F3-CFDDECF2214C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PkName">
+      <DTS:VariableValue
+        DTS:DataType="8">productKey</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EB7B7026-EA6C-41E8-B1BD-7B5EDA5FCFDF}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Error">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6BF19E92-BE25-498B-83CA-0738FF50E39D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Normal">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{503818B9-D121-4984-92B4-8926C498F551}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Xtrct">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{40B0C2B0-88BA-4A99-92B9-A8406A597E56}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CFC0FB94-497D-4803-BC9C-3731D94E3E9C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName">
+      <DTS:VariableValue
+        DTS:DataType="8">DimProduct</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\AuditKey"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{FA466FEB-7D8B-4273-8548-874B28AF07AC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AuditKey"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
+          SQLTask:SqlStatementSource="INSERT INTO [DimAudit]&#xA;           (ParentAuditKey&#xA;           ,[TableName]&#xA;           ,[PkgName]&#xA;           ,[PkgGUID]&#xA;           ,[PkgVersionGUID]&#xA;           ,[PkgVersionMajor]&#xA;           ,[PkgVersionMinor]&#xA;           ,[ExecStartDT]&#xA;           ,[ExecStopDT]&#xA;           ,[ExecutionInstanceGUID]&#xA;           ,[ExtractRowCnt]&#xA;           ,[InsertRowCnt]&#xA;           ,[UpdateRowCnt]&#xA;           ,[ErrorRowCnt]&#xA;           ,[TableInitialRowCnt]&#xA;           ,[TableFinalRowCnt]&#xA;           ,[TableMaxSurrogateKey]&#xA;           ,[SuccessfulProcessingInd])&#xA;     VALUES&#xA;           (@ParentAuditKey&#xA;           ,@TableName&#xA;           ,@PkgName&#xA;           ,@PkgGUID&#xA;           ,@PkgVersionGUID&#xA;           ,@PkgVersionMajor&#xA;           ,@PkgVersionMinor&#xA;           ,@StartTime&#xA;           ,NULL&#xA;           ,@PkgExecGUID&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,'N')&#xA;SELECT CAST(SCOPE_IDENTITY() AS INT) AS AuditKey&#xA;go&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AuditKey" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="StartTime"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="26"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgName"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgGUID"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionGUID"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionMajor"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionMinor"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgExecGUID"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="TableName"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="ParentAuditKey"
+            SQLTask:DtsVariableName="ParentAuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{7BF9601A-76BD-4A5C-8DDA-B8C2AB67EBBE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
+          SQLTask:SqlStatementSource="DELETE FROM  DimProduct WHERE productKey &gt;= 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Individual Cutomers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{109A690D-AE1B-4B27-A145-D3BB8591B1CA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Individual Cutomers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Individual Cutomers\Bulk load DimCustomer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Bulk load DimCustomer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[DimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">1000</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Connections[OleDbConnection]"
+                  connectionManagerID="{1D3C2A40-CBBB-4C2C-979C-50C9E7F7B8E1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OleDb NorthwindDataMart]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowlsCurrent]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="RowlsCurrent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowlsCurrent]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowStartDate]"
+                      cachedDataType="dbDate"
+                      cachedName="RowStartDate"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowStartDate]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowEndDate]"
+                      cachedDataType="dbDate"
+                      cachedName="RowEndDate"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowEndDate]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[RowChangeReason]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="RowChangeReason"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowChangeReason]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[InsertAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="InsertAuditKey"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[InsertAuditKey]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[UpdateAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="UpdateAuditKey"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[UpdateAuditKey]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[ProductID]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Name]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[ProveedorID]"
+                      cachedDataType="i4"
+                      cachedName="ProveedorID"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[ProveedorID]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProveedorID]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[QuantityPerUnit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="QuantityPerUnit"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[QuantityPerUnit]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[QuantityPerUnit]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[UnitsInStock]"
+                      cachedDataType="i2"
+                      cachedName="UnitsInStock"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitsInStock]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsInStock]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[UnitsOnOrder]"
+                      cachedDataType="i2"
+                      cachedName="UnitsOnOrder"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitsOnOrder]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsOnOrder]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[Description]"
+                      cachedDataType="nText"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Description]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].Columns[CategoryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CategoryName"
+                      externalMetadataColumnId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[CategoryName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowIsCurrent]"
+                      dataType="wstr"
+                      length="1"
+                      name="RowIsCurrent" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowStartDate]"
+                      dataType="dbDate"
+                      name="RowStartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowEndDate]"
+                      dataType="dbDate"
+                      name="RowEndDate" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[RowChangeReason]"
+                      dataType="wstr"
+                      length="200"
+                      name="RowChangeReason" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[InsertAuditKey]"
+                      dataType="i4"
+                      name="InsertAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UpdateAuditKey]"
+                      dataType="i4"
+                      name="UpdateAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[ProductKey]"
+                      dataType="i4"
+                      name="ProductKey" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[ProveedorID]"
+                      dataType="i4"
+                      name="ProveedorID" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[QuantityPerUnit]"
+                      dataType="wstr"
+                      length="50"
+                      name="QuantityPerUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitsInStock]"
+                      dataType="i2"
+                      name="UnitsInStock" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[UnitsOnOrder]"
+                      dataType="i2"
+                      name="UnitsOnOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CategoryName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Bulk load DimCustomer.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Individual Cutomers\Conversion"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada].Columns[Description]"
+                      cachedDataType="nText"
+                      cachedName="Description"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Description]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[DescriptionWstr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[DescriptionWstr]"
+                      name="DescriptionWstr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_WSTR,100)#{Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Description]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)Description</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Individual Cutomers\Fix null"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Fix null"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Individual Cutomers\Fix null.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Individual Cutomers\Fix null.Inputs[Entrada de columna derivada].Columns[DescriptionWstr]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="DescriptionWstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[DescriptionWstr]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[DescriptionWstr]}) ? "no description" : #{Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada].Columns[DescriptionWstr]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DescriptionWstr) ? "no description" : DescriptionWstr</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\Fix null.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Fix null.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Individual Cutomers\Fix null.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Fix null.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Fix null.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Fix null.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Fix null.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Fix null.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Individual Cutomers\Row Metadata"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Row Metadata"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Individual Cutomers\Row Metadata.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Row Metadata.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[InsertAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[InsertAuditKey]"
+                      name="InsertAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[AuditKey]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@AuditKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[UpdateAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[UpdateAuditKey]"
+                      name="UpdateAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[AuditKey]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@AuditKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowlsCurrent]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowlsCurrent]"
+                      name="RowlsCurrent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">"y"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"y"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowStartDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowStartDate]"
+                      name="RowStartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_DBDATE)@[ExtractStartDate]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)@ExtractStartDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowEndDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowEndDate]"
+                      name="RowEndDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_DBDATE)"12/31/9999"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)"12/31/9999"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowChangeReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada].Columns[RowChangeReason]"
+                      name="RowChangeReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">"New"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"New"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Individual Cutomers\Row Metadata.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Individual Cutomers\RowCount"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
+              name="RowCount">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el recuento de filas."
+                  name="VariableName">User::RC_Xtrct</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]"
+                  hasSideEffects="true"
+                  name="Entrada de Recuento de filas 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\RowCount.Outputs[Salida de Recuento de filas 1]"
+                  name="Salida de Recuento de filas 1"
+                  synchronousInputId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Individual Cutomers\Stage product"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Stage product"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [ProductID]
+      ,[Name]
+      ,[ProveedorID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[Description]
+      ,[CategoryName]
+  FROM [NorthwindStage].[dbo].[StageProducto]</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Individual Cutomers\Stage product.Connections[OleDbConnection]"
+                  connectionManagerID="{1D3C2A40-CBBB-4C2C-979C-50C9E7F7B8E1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OleDb NorthwindDataMart]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[ProductID]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProveedorID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[ProveedorID]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[ProveedorID]"
+                      name="ProveedorID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[QuantityPerUnit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[QuantityPerUnit]"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[QuantityPerUnit]"
+                      name="QuantityPerUnit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsInStock]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitsInStock]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsInStock]"
+                      name="UnitsInStock"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsOnOrder]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitsOnOrder]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[UnitsOnOrder]"
+                      name="UnitsOnOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Description]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[Description]"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
+                      name="CategoryName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[ProveedorID]"
+                      dataType="i4"
+                      name="ProveedorID" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[QuantityPerUnit]"
+                      dataType="wstr"
+                      length="50"
+                      name="QuantityPerUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitsInStock]"
+                      dataType="i2"
+                      name="UnitsInStock" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[UnitsOnOrder]"
+                      dataType="i2"
+                      name="UnitsOnOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CategoryName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ProductID]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ProveedorID]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ProveedorID]"
+                      name="ProveedorID" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[QuantityPerUnit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[QuantityPerUnit]"
+                      name="QuantityPerUnit" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitPrice]"
+                      name="UnitPrice" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitsInStock]"
+                      dataType="i2"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitsInStock]"
+                      name="UnitsInStock" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitsOnOrder]"
+                      dataType="i2"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[UnitsOnOrder]"
+                      name="UnitsOnOrder" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[Description]"
+                      dataType="nText"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
+                      name="CategoryName" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Individual Cutomers\Stage product.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Individual Cutomers.Paths[Salida de columna derivada]"
+              endId="Package\Individual Cutomers\RowCount.Inputs[Entrada de Recuento de filas 1]"
+              name="Salida de columna derivada"
+              startId="Package\Individual Cutomers\Row Metadata.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Individual Cutomers.Paths[Salida de columna derivada1]"
+              endId="Package\Individual Cutomers\Fix null.Inputs[Entrada de columna derivada]"
+              name="Salida de columna derivada"
+              startId="Package\Individual Cutomers\Conversion.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Individual Cutomers.Paths[Salida de columna derivada2]"
+              endId="Package\Individual Cutomers\Row Metadata.Inputs[Entrada de columna derivada]"
+              name="Salida de columna derivada"
+              startId="Package\Individual Cutomers\Fix null.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Individual Cutomers.Paths[Salida de origen de OLE DB]"
+              endId="Package\Individual Cutomers\Conversion.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Individual Cutomers\Stage product.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\Individual Cutomers.Paths[Salida de Recuento de filas 1]"
+              endId="Package\Individual Cutomers\Bulk load DimCustomer.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de Recuento de filas 1"
+              startId="Package\Individual Cutomers\RowCount.Outputs[Salida de Recuento de filas 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\postAuditKey"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{C79ADE93-25EE-4729-ADE8-AECE9CCC83E7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="postAuditKey"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
+          SQLTask:SqlStatementSource="UPDATE [DimAudit]&#xA;SET ExecStopDT = SYSDATETIME()&#xA; , ExtractRowCnt = @RC_Xtrct&#xA; ,TableFinalRowCnt = @RowCount&#xA; ,ErrorRowCnt = @RC_Error&#xA; ,SuccessfulProcessingInd='Y'&#xA;WHERE AuditKey = @AuditKey" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RowCount"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC_Error"
+            SQLTask:DtsVariableName="User::RC_Error"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="AuditKey"
+            SQLTask:DtsVariableName="User::AuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC_Xtrct"
+            SQLTask:DtsVariableName="User::RC_Xtrct"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PostRowCount"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{8EE1A45E-DCB4-4AF3-8530-308817673911}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PostRowCount"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimProduct"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\RowCnt"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{B5F55C2D-98CC-42D0-B3DC-359D04FC1BE9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="RowCnt"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{727E39B4-8400-4206-B8CB-5E433A07F506}"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimProduct"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8AB36DD6-05C9-421A-8618-9B2D12B5A99E}"
+      DTS:From="Package\RowCnt"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Delete" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{80351BDA-F583-411E-AA17-4CB0E44B2650}"
+      DTS:From="Package\Delete"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\AuditKey" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{CB91F847-12D5-40B6-A6E1-8F81822DA68C}"
+      DTS:From="Package\AuditKey"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Individual Cutomers" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{A3346AD9-3795-462D-A3B7-515019965C10}"
+      DTS:From="Package\Individual Cutomers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\PostRowCount" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{E1BB8D0D-F720-4C6F-B6AF-BC58BF2FFDDF}"
+      DTS:From="Package\PostRowCount"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\postAuditKey" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="120,42"
+          Id="Package\AuditKey"
+          TopLeft="47,143" />
+        <NodeLayout
+          Size="109,42"
+          Id="Package\Delete"
+          TopLeft="47,73" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Individual Cutomers"
+          TopLeft="69,209" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\PostRowCount"
+          TopLeft="99,288" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\RowCnt"
+          TopLeft="36,15" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\postAuditKey"
+          TopLeft="300,247" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="36,36">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,58"
+              Start="0,0"
+              End="3.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,54"
+                    Point2="-22.5,58"
+                    Point3="-18.5,58" />
+                  <mssgle:LineSegment
+                    End="3.5,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="104.25,115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="107,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.5,24"
+              Start="0,0"
+              End="48.5,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="4,12" />
+                  <mssgle:LineSegment
+                    End="44.5,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.5,12"
+                    Point2="48.5,12"
+                    Point3="48.5,16" />
+                  <mssgle:LineSegment
+                    End="48.5,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="155.5,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17,37"
+              Start="0,0"
+              End="17,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="13,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,18.5"
+                    Point2="17,18.5"
+                    Point3="17,22.5" />
+                  <mssgle:LineSegment
+                    End="17,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="246,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54,-41"
+              Start="0,0"
+              End="46.5,-41">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="23,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23,0"
+                    Point2="27,0"
+                    Point3="27,-4" />
+                  <mssgle:LineSegment
+                    End="27,-37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27,-37"
+                    Point2="27,-41"
+                    Point3="31,-41" />
+                  <mssgle:LineSegment
+                    End="46.5,-41" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Individual Cutomers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Individual Cutomers\Conversion"
+          TopLeft="270,96" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Individual Cutomers\Stage product"
+          TopLeft="73,44" />
+        <NodeLayout
+          Size="112,42"
+          Id="Package\Individual Cutomers\Fix null"
+          TopLeft="523,149" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Individual Cutomers\RowCount"
+          TopLeft="118,259" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Individual Cutomers\Bulk load DimCustomer"
+          TopLeft="97,330" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Individual Cutomers\Row Metadata"
+          TopLeft="89,192" />
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de Recuento de filas 1]"
+          TopLeft="181.5,301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10,29"
+              Start="0,0"
+              End="10,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
+                  <mssgle:LineSegment
+                    End="6,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6,14.5"
+                    Point2="10,14.5"
+                    Point3="10,18.5" />
+                  <mssgle:LineSegment
+                    End="10,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de origen de OLE DB]"
+          TopLeft="218,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,52"
+              Start="0,0"
+              End="44.5,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,0"
+                    Point2="26,0"
+                    Point3="26,4" />
+                  <mssgle:LineSegment
+                    End="26,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26,48"
+                    Point2="26,52"
+                    Point3="30,52" />
+                  <mssgle:LineSegment
+                    End="44.5,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de columna derivada2]"
+          TopLeft="523,175.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-288,37.3333333333333"
+              Start="0,0"
+              End="-280.5,37.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-117.54128440367,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.54128440367,0"
+                    Point2="-121.54128440367,0"
+                    Point3="-121.54128440367,4" />
+                  <mssgle:LineSegment
+                    End="-121.54128440367,33.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-121.54128440367,33.3333333333333"
+                    Point2="-121.54128440367,37.3333333333333"
+                    Point3="-125.54128440367,37.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-280.5,37.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de columna derivada1]"
+          TopLeft="401,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,53"
+              Start="0,0"
+              End="114.5,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57,0"
+                    Point2="61,0"
+                    Point3="61,4" />
+                  <mssgle:LineSegment
+                    End="61,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61,49"
+                    Point2="61,53"
+                    Point3="65,53" />
+                  <mssgle:LineSegment
+                    End="114.5,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Individual Cutomers.Paths[Salida de columna derivada]"
+          TopLeft="162,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,25"
+              Start="0,0"
+              End="19.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="15.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,12.5"
+                    Point2="19.5,12.5"
+                    Point3="19.5,16.5" />
+                  <mssgle:LineSegment
+                    End="19.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Individual Cutomers\Stage product">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Individual Cutomers\Bulk load DimCustomer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
