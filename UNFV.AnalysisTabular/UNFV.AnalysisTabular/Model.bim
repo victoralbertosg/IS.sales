@@ -1,0 +1,1086 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "es-ES",
+    "dataSources": [
+      {
+        "name": "SqlServer JAV05JLINFVSOTO NorthwindDataMart",
+        "connectionString": "Provider=SQLNCLI11;Data Source=JAV05JLINFVSOTO;Initial Catalog=NorthwindDataMart;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "pjudicial",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DimCustomer",
+        "columns": [
+          {
+            "name": "CustomerKey",
+            "dataType": "int64",
+            "sourceColumn": "CustomerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactName",
+            "dataType": "string",
+            "sourceColumn": "ContactName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactTitle",
+            "dataType": "string",
+            "sourceColumn": "ContactTitle",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Fax",
+            "dataType": "string",
+            "sourceColumn": "Fax",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowIsCurrent",
+            "dataType": "string",
+            "sourceColumn": "RowIsCurrent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowChangeReason",
+            "dataType": "string",
+            "sourceColumn": "RowChangeReason",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimCustomer",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DimCustomer].* FROM [dbo].[DimCustomer] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimCustomer].* FROM [dbo].[DimCustomer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimCustomer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimEmployee",
+        "columns": [
+          {
+            "name": "employeeKey",
+            "dataType": "int64",
+            "sourceColumn": "employeeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "employeeID",
+            "dataType": "int64",
+            "sourceColumn": "employeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "BirthDate",
+            "dataType": "dateTime",
+            "sourceColumn": "BirthDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "HireDate",
+            "dataType": "dateTime",
+            "sourceColumn": "HireDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "HomePhone",
+            "dataType": "string",
+            "sourceColumn": "HomePhone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowIsCurrent",
+            "dataType": "string",
+            "sourceColumn": "RowIsCurrent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowChangeReason",
+            "dataType": "string",
+            "sourceColumn": "RowChangeReason",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimEmployee",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DimEmployee].* FROM [dbo].[DimEmployee] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimEmployee].* FROM [dbo].[DimEmployee] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimEmployee"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimProduct",
+        "columns": [
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "sourceColumn": "ProductKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProveedorID",
+            "dataType": "int64",
+            "sourceColumn": "ProveedorID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "QuantityPerUnit",
+            "dataType": "string",
+            "sourceColumn": "QuantityPerUnit",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "UnitsInStock",
+            "dataType": "int64",
+            "sourceColumn": "UnitsInStock",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "UnitsOnOrder",
+            "dataType": "int64",
+            "sourceColumn": "UnitsOnOrder",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowIsCurrent",
+            "dataType": "string",
+            "sourceColumn": "RowIsCurrent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowChangeReason",
+            "dataType": "string",
+            "sourceColumn": "RowChangeReason",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimProduct",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DimProduct].* FROM [dbo].[DimProduct] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimProduct].* FROM [dbo].[DimProduct] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimProduct"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimProvider",
+        "columns": [
+          {
+            "name": "ProviderKey",
+            "dataType": "int64",
+            "sourceColumn": "ProviderKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProveedorID",
+            "dataType": "int64",
+            "sourceColumn": "ProveedorID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactName",
+            "dataType": "string",
+            "sourceColumn": "ContactName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactTitle",
+            "dataType": "string",
+            "sourceColumn": "ContactTitle",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Adress",
+            "dataType": "string",
+            "sourceColumn": "Adress",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "telefone",
+            "dataType": "string",
+            "sourceColumn": "telefone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "fax",
+            "dataType": "string",
+            "sourceColumn": "fax",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "HomePage",
+            "dataType": "string",
+            "sourceColumn": "HomePage",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowIsCurrent",
+            "dataType": "string",
+            "sourceColumn": "RowIsCurrent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowChangeReason",
+            "dataType": "string",
+            "sourceColumn": "RowChangeReason",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimProvider",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DimProvider].* FROM [dbo].[DimProvider] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimProvider].* FROM [dbo].[DimProvider] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimProvider"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimTime",
+        "columns": [
+          {
+            "name": "TimeKey",
+            "dataType": "int64",
+            "sourceColumn": "TimeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "dateDT",
+            "dataType": "dateTime",
+            "sourceColumn": "dateDT",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "yearDT",
+            "dataType": "int64",
+            "sourceColumn": "yearDT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "trimester",
+            "dataType": "int64",
+            "sourceColumn": "trimester",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "monthDT",
+            "dataType": "string",
+            "sourceColumn": "monthDT",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "dayDT",
+            "dataType": "int64",
+            "sourceColumn": "dayDT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "RowIsCurrent",
+            "dataType": "string",
+            "sourceColumn": "RowIsCurrent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RowStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RowEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "RowChangeReason",
+            "dataType": "string",
+            "sourceColumn": "RowChangeReason",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimTime",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DimTime].* FROM [dbo].[DimTime] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DimTime].* FROM [dbo].[DimTime] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimTime"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "columns": [
+          {
+            "name": "SalesKey",
+            "dataType": "int64",
+            "sourceColumn": "SalesKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ordenID",
+            "dataType": "int64",
+            "sourceColumn": "ordenID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "customerKey",
+            "dataType": "int64",
+            "sourceColumn": "customerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "employeeKey",
+            "dataType": "int64",
+            "sourceColumn": "employeeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "providerKey",
+            "dataType": "int64",
+            "sourceColumn": "providerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "dateKey",
+            "dataType": "int64",
+            "sourceColumn": "dateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "productKey",
+            "dataType": "int64",
+            "sourceColumn": "productKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "sourceProviderType": "Single"
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": ".SalesAmount",
+            "expression": "SUMX(Sales, Sales[Quantity]* Sales[UnitPrice])"
+          },
+          {
+            "name": ".SalesAmountAvg",
+            "expression": "AVERAGEX(Sales, Sales[Quantity]* Sales[UnitPrice])"
+          },
+          {
+            "name": ".SalesAggregateMonth",
+            "expression": "TOTALMTD(Sales[.SalesAmount],DimTime[dateDT])"
+          },
+          {
+            "name": ".SalesAggregateQuater",
+            "expression": "TOTALQTD(Sales[.SalesAmount],DimTime[dateDT])"
+          },
+          {
+            "name": ".SalesAggregateYear",
+            "expression": "TOTALYTD(Sales[.SalesAmount],DimTime[dateDT])"
+          },
+          {
+            "name": ".sales_Previous_year",
+            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSYEAR(DimTime[dateDT]))"
+          },
+          {
+            "name": ".sales_Previous_Quarter",
+            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSQUARTER(DimTime[dateDT]))"
+          },
+          {
+            "name": ".sales_Previous_Month",
+            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSMONTH(DimTime[dateDT]))"
+          },
+          {
+            "name": ".KPIsales",
+            "expression": "Sales[.SalesAmount]",
+            "kpi": {
+              "targetExpression": "'Sales'[.sales_Previous_year]",
+              "statusGraphic": "Three Symbols UnCircled Colored",
+              "statusExpression": [
+                "var x='Sales'[.KPIsales]/'Sales'[_.KPIsales Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.35,-1,",
+                "\t                If(x<0.73,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "35"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "73"
+                }
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sales"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Sales 1",
+        "columns": [
+          {
+            "name": "SalesKey",
+            "dataType": "int64",
+            "sourceColumn": "SalesKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ordenID",
+            "dataType": "int64",
+            "sourceColumn": "ordenID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "customerKey",
+            "dataType": "int64",
+            "sourceColumn": "customerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "employeeKey",
+            "dataType": "int64",
+            "sourceColumn": "employeeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "providerKey",
+            "dataType": "int64",
+            "sourceColumn": "providerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "dateKey",
+            "dataType": "int64",
+            "sourceColumn": "dateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "productKey",
+            "dataType": "int64",
+            "sourceColumn": "productKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "sourceProviderType": "Single"
+          },
+          {
+            "name": "SubTotal",
+            "dataType": "decimal",
+            "sourceColumn": "SubTotal",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "IGV",
+            "dataType": "decimal",
+            "sourceColumn": "IGV",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Total",
+            "dataType": "decimal",
+            "sourceColumn": "Total",
+            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "InsertAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "InsertAuditKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UpdateAuditKey",
+            "dataType": "int64",
+            "sourceColumn": "UpdateAuditKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales 1",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": ".SalesAmount1",
+            "expression": "sum('Sales 1'[Total])"
+          },
+          {
+            "name": ".sales_Previous_year1",
+            "expression": "CALCULATE('Sales 1'[.SalesAmount1],PREVIOUSYEAR(DimTime[dateDT]))"
+          },
+          {
+            "name": ".SalesAggregateYear1",
+            "expression": "TOTALYTD('Sales 1'[.SalesAmount1],DimTime[dateDT])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sales"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "ac9789c3-0d6d-495a-bd50-ad8a610b8bc6",
+        "fromTable": "Sales 1",
+        "fromColumn": "dateKey",
+        "toTable": "DimTime",
+        "toColumn": "TimeKey"
+      },
+      {
+        "name": "b9837a8e-a565-4893-a25f-31297f41f5cd",
+        "fromTable": "Sales 1",
+        "fromColumn": "providerKey",
+        "toTable": "DimProvider",
+        "toColumn": "ProviderKey"
+      },
+      {
+        "name": "5316a4fc-07f7-403c-af04-e2fb2d37da0a",
+        "fromTable": "Sales 1",
+        "fromColumn": "productKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "df3b757d-dd96-40e5-bc2e-ac043dfbcb0c",
+        "fromTable": "Sales 1",
+        "fromColumn": "employeeKey",
+        "toTable": "DimEmployee",
+        "toColumn": "employeeKey"
+      },
+      {
+        "name": "5335bd67-a552-4f42-9b4e-3545e08e6a72",
+        "fromTable": "Sales 1",
+        "fromColumn": "customerKey",
+        "toTable": "DimCustomer",
+        "toColumn": "CustomerKey"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
