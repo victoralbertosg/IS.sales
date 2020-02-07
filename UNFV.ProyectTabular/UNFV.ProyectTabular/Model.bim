@@ -758,195 +758,6 @@
             "sourceProviderType": "Single"
           },
           {
-            "name": "InsertAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "InsertAuditKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "UpdateAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "UpdateAuditKey",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Sales",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
-              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": ".SalesAmount",
-            "expression": "SUMX(Sales, Sales[Quantity]* Sales[UnitPrice])"
-          },
-          {
-            "name": ".SalesAmountAvg",
-            "expression": "AVERAGEX(Sales, Sales[Quantity]* Sales[UnitPrice])"
-          },
-          {
-            "name": ".SalesAggregateMonth",
-            "expression": "TOTALMTD(Sales[.SalesAmount],DimTime[dateDT])"
-          },
-          {
-            "name": ".SalesAggregateQuater",
-            "expression": "TOTALQTD(Sales[.SalesAmount],DimTime[dateDT])"
-          },
-          {
-            "name": ".SalesAggregateYear",
-            "expression": "TOTALYTD(Sales[.SalesAmount],DimTime[dateDT])"
-          },
-          {
-            "name": ".sales_Previous_year",
-            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSYEAR(DimTime[dateDT]))"
-          },
-          {
-            "name": ".sales_Previous_Quarter",
-            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSQUARTER(DimTime[dateDT]))"
-          },
-          {
-            "name": ".sales_Previous_Month",
-            "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSMONTH(DimTime[dateDT]))"
-          },
-          {
-            "name": ".KPIsales",
-            "expression": "Sales[.SalesAmount]",
-            "kpi": {
-              "targetExpression": "'Sales'[.sales_Previous_year]",
-              "statusGraphic": "Three Symbols UnCircled Colored",
-              "statusExpression": [
-                "var x='Sales'[.KPIsales]/'Sales'[_.KPIsales Goal] return",
-                "            if(ISBLANK(x),BLANK(),",
-                "                    If(x<0.35,-1,",
-                "\t                If(x<0.73,0,1)",
-                "                )",
-                "            )",
-                "            "
-              ],
-              "annotations": [
-                {
-                  "name": "GoalType",
-                  "value": "Measure"
-                },
-                {
-                  "name": "KpiStatusType",
-                  "value": "Linear"
-                },
-                {
-                  "name": "KpiThresholdType",
-                  "value": "Percentage"
-                },
-                {
-                  "name": "KpiThresholdOrdering",
-                  "value": "Ascending"
-                },
-                {
-                  "name": "KpiThresholdCount",
-                  "value": "2"
-                },
-                {
-                  "name": "KpiThreshold_0",
-                  "value": "35"
-                },
-                {
-                  "name": "KpiThreshold_1",
-                  "value": "73"
-                }
-              ]
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Sales"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Sales 1",
-        "columns": [
-          {
-            "name": "SalesKey",
-            "dataType": "int64",
-            "sourceColumn": "SalesKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "ordenID",
-            "dataType": "int64",
-            "sourceColumn": "ordenID",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "customerKey",
-            "dataType": "int64",
-            "sourceColumn": "customerKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "employeeKey",
-            "dataType": "int64",
-            "sourceColumn": "employeeKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "providerKey",
-            "dataType": "int64",
-            "sourceColumn": "providerKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "dateKey",
-            "dataType": "int64",
-            "sourceColumn": "dateKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "productKey",
-            "dataType": "int64",
-            "sourceColumn": "productKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "UnitPrice",
-            "dataType": "decimal",
-            "sourceColumn": "UnitPrice",
-            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
-            "sourceProviderType": "Currency",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Quantity",
-            "dataType": "int64",
-            "sourceColumn": "Quantity",
-            "sourceProviderType": "SmallInt"
-          },
-          {
-            "name": "Discount",
-            "dataType": "double",
-            "sourceColumn": "Discount",
-            "sourceProviderType": "Single"
-          },
-          {
             "name": "SubTotal",
             "dataType": "decimal",
             "sourceColumn": "SubTotal",
@@ -1000,7 +811,7 @@
         ],
         "partitions": [
           {
-            "name": "Sales 1",
+            "name": "Sales",
             "dataView": "full",
             "source": {
               "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
@@ -1010,16 +821,12 @@
         ],
         "measures": [
           {
-            "name": ".SalesAmount1",
-            "expression": "SUM('Sales 1'[Total])"
+            "name": "SalesAmount",
+            "expression": "sum('Sales'[Total])"
           },
           {
-            "name": ".sales_Previous_year1",
-            "expression": "CALCULATE('Sales 1'[.SalesAmount1],PREVIOUSYEAR(DimTime[dateDT]))"
-          },
-          {
-            "name": ".SalesAggregateYear1",
-            "expression": "TOTALYTD('Sales 1'[.SalesAmount1],DimTime[dateDT])"
+            "name": ".sales_Previous_year",
+            "expression": "CALCULATE(Sales[SalesAmount],PREVIOUSYEAR(DimTime[dateDT]))"
           }
         ],
         "annotations": [
@@ -1040,39 +847,39 @@
     ],
     "relationships": [
       {
-        "name": "ac9789c3-0d6d-495a-bd50-ad8a610b8bc6",
-        "fromTable": "Sales 1",
-        "fromColumn": "dateKey",
-        "toTable": "DimTime",
-        "toColumn": "TimeKey"
+        "name": "b34d1fe2-d85c-4e3a-bf73-008c20ef77e1",
+        "fromTable": "Sales",
+        "fromColumn": "customerKey",
+        "toTable": "DimCustomer",
+        "toColumn": "CustomerKey"
       },
       {
-        "name": "b9837a8e-a565-4893-a25f-31297f41f5cd",
-        "fromTable": "Sales 1",
-        "fromColumn": "providerKey",
-        "toTable": "DimProvider",
-        "toColumn": "ProviderKey"
-      },
-      {
-        "name": "5316a4fc-07f7-403c-af04-e2fb2d37da0a",
-        "fromTable": "Sales 1",
-        "fromColumn": "productKey",
-        "toTable": "DimProduct",
-        "toColumn": "ProductKey"
-      },
-      {
-        "name": "df3b757d-dd96-40e5-bc2e-ac043dfbcb0c",
-        "fromTable": "Sales 1",
+        "name": "dbdf7aff-1d7a-4c88-90ec-f513645b2df4",
+        "fromTable": "Sales",
         "fromColumn": "employeeKey",
         "toTable": "DimEmployee",
         "toColumn": "employeeKey"
       },
       {
-        "name": "5335bd67-a552-4f42-9b4e-3545e08e6a72",
-        "fromTable": "Sales 1",
-        "fromColumn": "customerKey",
-        "toTable": "DimCustomer",
-        "toColumn": "CustomerKey"
+        "name": "71400dfb-150a-461d-abe4-7aa204eaee43",
+        "fromTable": "Sales",
+        "fromColumn": "productKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "2d1c65e8-c434-40a5-b75d-362a78210a49",
+        "fromTable": "Sales",
+        "fromColumn": "providerKey",
+        "toTable": "DimProvider",
+        "toColumn": "ProviderKey"
+      },
+      {
+        "name": "0ec66f90-1f22-4421-9578-80db1b5616fe",
+        "fromTable": "Sales",
+        "fromColumn": "dateKey",
+        "toTable": "DimTime",
+        "toColumn": "TimeKey"
       }
     ],
     "annotations": [
