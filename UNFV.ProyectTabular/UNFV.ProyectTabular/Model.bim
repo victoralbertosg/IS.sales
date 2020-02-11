@@ -585,6 +585,7 @@
       },
       {
         "name": "DimTime",
+        "dataCategory": "Time",
         "columns": [
           {
             "name": "TimeKey",
@@ -595,6 +596,7 @@
           {
             "name": "dateDT",
             "dataType": "dateTime",
+            "isKey": true,
             "sourceColumn": "dateDT",
             "formatString": "General Date",
             "sourceProviderType": "DBTimeStamp"

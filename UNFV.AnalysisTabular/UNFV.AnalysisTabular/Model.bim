@@ -585,6 +585,7 @@
       },
       {
         "name": "DimTime",
+        "dataCategory": "Time",
         "columns": [
           {
             "name": "TimeKey",
@@ -595,6 +596,7 @@
           {
             "name": "dateDT",
             "dataType": "dateTime",
+            "isKey": true,
             "sourceColumn": "dateDT",
             "formatString": "General Date",
             "sourceProviderType": "DBTimeStamp"
@@ -1040,36 +1042,36 @@
     ],
     "relationships": [
       {
-        "name": "ac9789c3-0d6d-495a-bd50-ad8a610b8bc6",
-        "fromTable": "Sales 1",
-        "fromColumn": "dateKey",
-        "toTable": "DimTime",
-        "toColumn": "TimeKey"
-      },
-      {
-        "name": "b9837a8e-a565-4893-a25f-31297f41f5cd",
-        "fromTable": "Sales 1",
-        "fromColumn": "providerKey",
-        "toTable": "DimProvider",
-        "toColumn": "ProviderKey"
-      },
-      {
-        "name": "5316a4fc-07f7-403c-af04-e2fb2d37da0a",
-        "fromTable": "Sales 1",
-        "fromColumn": "productKey",
-        "toTable": "DimProduct",
-        "toColumn": "ProductKey"
-      },
-      {
-        "name": "df3b757d-dd96-40e5-bc2e-ac043dfbcb0c",
-        "fromTable": "Sales 1",
+        "name": "2fea2a8f-0531-4686-ab24-80bf7a2f443b",
+        "fromTable": "Sales",
         "fromColumn": "employeeKey",
         "toTable": "DimEmployee",
         "toColumn": "employeeKey"
       },
       {
-        "name": "5335bd67-a552-4f42-9b4e-3545e08e6a72",
-        "fromTable": "Sales 1",
+        "name": "525a16c6-dc5d-48cc-9738-a42ba4103a0d",
+        "fromTable": "Sales",
+        "fromColumn": "productKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "0d45e9f8-fe9d-418c-ac16-27559d2f84f1",
+        "fromTable": "Sales",
+        "fromColumn": "providerKey",
+        "toTable": "DimProvider",
+        "toColumn": "ProviderKey"
+      },
+      {
+        "name": "50979555-d165-476c-9249-0187bb112d32",
+        "fromTable": "Sales",
+        "fromColumn": "dateKey",
+        "toTable": "DimTime",
+        "toColumn": "TimeKey"
+      },
+      {
+        "name": "db86a962-44cc-4481-a5fc-81b271cb32f6",
+        "fromTable": "Sales",
         "fromColumn": "customerKey",
         "toTable": "DimCustomer",
         "toColumn": "CustomerKey"
