@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>/demoReporting/dsDemo</DataSourceReference>
+      <CommandText>select 
+D.FullDateAlternateKey,
+SalesAmount,
+P.SpanishProductName,
+PS.SpanishProductSubcategoryName,
+PC.SpanishProductCategoryName,
+SalesAmount*FLOOR(RAND()*(9-1)+1)/10 AS Meta
+from [dbo].[FactInternetSales] FIS
+INNER JOIN [dbo].[DimProduct] P ON FIS.ProductKey=P.ProductKey
+INNER JOIN [dbo].[DimDate] D ON FIS.OrderDateKey=D.DateKey
+INNER JOIN [dbo].[DimProductSubcategory] PS ON P.ProductSubcategoryKey=PS.ProductSubcategoryKey
+INNER JOIN [dbo].[DimProductCategory] PC ON PC.ProductCategoryKey=PS.ProductCategoryKey</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="FullDateAlternateKey">
+        <DataField>FullDateAlternateKey</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="SalesAmount">
+        <DataField>SalesAmount</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductName">
+        <DataField>SpanishProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductSubcategoryName">
+        <DataField>SpanishProductSubcategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductCategoryName">
+        <DataField>SpanishProductCategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Meta">
+        <DataField>Meta</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+  <rd:ReportServerUrl>http://jav05jlinfvsoto/ReportServer</rd:ReportServerUrl>
+</SharedDataSet>

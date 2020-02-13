@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Pk_Sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E4D492E6-64E1-4091-945E-FC860356020E}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{D565F21B-CE2C-46E4-8089-86F952DD9CDE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -2709,49 +2709,97 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="171,42"
+          Id="Package\LoadSales\División condicional"
+          TopLeft="386,326" />
+        <NodeLayout
           Size="146,42"
           Id="Package\LoadSales\Row Metadata"
           TopLeft="228,71" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\LoadSales\lookupEmployee"
-          TopLeft="402,227" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\LoadSales\lookupProvider"
-          TopLeft="204,273" />
         <NodeLayout
           Size="160,42"
           Id="Package\LoadSales\Recuento de filas"
           TopLeft="545,415" />
         <NodeLayout
-          Size="126,42"
-          Id="Package\LoadSales\Sales bulk"
-          TopLeft="266,423" />
+          Size="146,42"
+          Id="Package\LoadSales\lookupProduct"
+          TopLeft="591,270" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\LoadSales\calculate total"
+          TopLeft="607,134" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\LoadSales\Stage order"
+          TopLeft="174,18" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\LoadSales\lookupProvider"
+          TopLeft="204,273" />
         <NodeLayout
           Size="155,42"
           Id="Package\LoadSales\lookupCustomer"
           TopLeft="205,208" />
         <NodeLayout
           Size="146,42"
-          Id="Package\LoadSales\lookupProduct"
-          TopLeft="591,270" />
+          Id="Package\LoadSales\errorSalesBulk"
+          TopLeft="585,499" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\LoadSales\Calculate Subtotal"
+          TopLeft="450,55" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\LoadSales\Sales bulk"
+          TopLeft="266,423" />
         <NodeLayout
           Size="133,42"
           Id="Package\LoadSales\lookupTime"
           TopLeft="211,144" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\LoadSales\División condicional"
-          TopLeft="386,326" />
+          Size="156,42"
+          Id="Package\LoadSales\lookupEmployee"
+          TopLeft="402,227" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\LoadSales\errorSalesBulk"
-          TopLeft="585,499" />
-        <NodeLayout
-          Size="134,42"
-          Id="Package\LoadSales\Stage order"
-          TopLeft="174,18" />
+          Size="137,42"
+          Id="Package\LoadSales\calculate igv"
+          TopLeft="664,69" />
+        <EdgeLayout
+          Id="Package\LoadSales.Paths[Salida predeterminada de división condicional]"
+          TopLeft="444.333333333333,368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115.333333333333,55"
+              Start="0,0"
+              End="-115.333333333333,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.305909617613" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.305909617613"
+                    Point2="0,22.305909617613"
+                    Point3="-4,22.305909617613" />
+                  <mssgle:LineSegment
+                    End="-111.333333333333,22.305909617613" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-111.333333333333,22.305909617613"
+                    Point2="-115.333333333333,22.305909617613"
+                    Point3="-115.333333333333,26.305909617613" />
+                  <mssgle:LineSegment
+                    End="-115.333333333333,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-158.589459635417,27.305909617613,201.8455859375,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\LoadSales.Paths[Salida de Recuento de filas 1]"
           TopLeft="625,457">
@@ -2983,107 +3031,31 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\LoadSales.Paths[bad]"
-          TopLeft="498.666666666667,368">
+          Id="Package\LoadSales.Paths[Salida de columna derivada3]"
+          TopLeft="607,155">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126.333333333333,47"
+              EndConnector="-263,10"
               Start="0,0"
-              End="126.333333333333,39.5">
+              End="-255.5,10">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.0614136732329" />
+                    End="-127.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.0614136732329"
-                    Point2="0,19.0614136732329"
-                    Point3="4,19.0614136732329" />
+                    Point1="-127.5,0"
+                    Point2="-131.5,0"
+                    Point3="-131.5,4" />
                   <mssgle:LineSegment
-                    End="122.333333333333,19.0614136732329" />
+                    End="-131.5,6" />
                   <mssgle:CubicBezierSegment
-                    Point1="122.333333333333,19.0614136732329"
-                    Point2="126.333333333333,19.0614136732329"
-                    Point3="126.333333333333,23.0614136732329" />
+                    Point1="-131.5,6"
+                    Point2="-131.5,10"
+                    Point3="-135.5,10" />
                   <mssgle:LineSegment
-                    End="126.333333333333,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="54.6770572916667,24.0614136732329,16.97921875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\LoadSales.Paths[Salida predeterminada de división condicional]"
-          TopLeft="444.333333333333,368">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-115.333333333333,55"
-              Start="0,0"
-              End="-115.333333333333,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.305909617613" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.305909617613"
-                    Point2="0,22.305909617613"
-                    Point3="-4,22.305909617613" />
-                  <mssgle:LineSegment
-                    End="-111.333333333333,22.305909617613" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-111.333333333333,22.305909617613"
-                    Point2="-115.333333333333,22.305909617613"
-                    Point3="-115.333333333333,26.305909617613" />
-                  <mssgle:LineSegment
-                    End="-115.333333333333,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-158.589459635417,27.305909617613,201.8455859375,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\LoadSales\Calculate Subtotal"
-          TopLeft="450,55" />
-        <EdgeLayout
-          Id="Package\LoadSales.Paths[Salida de columna derivada]"
-          TopLeft="374,92">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76,-16"
-              Start="0,0"
-              End="68.5,-16">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="34,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34,0"
-                    Point2="38,0"
-                    Point3="38,-4" />
-                  <mssgle:LineSegment
-                    End="38,-12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38,-12"
-                    Point2="38,-16"
-                    Point3="42,-16" />
-                  <mssgle:LineSegment
-                    End="68.5,-16" />
+                    End="-255.5,10" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3092,48 +3064,6 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137,42"
-          Id="Package\LoadSales\calculate igv"
-          TopLeft="664,69" />
-        <EdgeLayout
-          Id="Package\LoadSales.Paths[Salida de columna derivada1]"
-          TopLeft="614,76">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,14"
-              Start="0,0"
-              End="42.5,14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="21,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21,0"
-                    Point2="25,0"
-                    Point3="25,4" />
-                  <mssgle:LineSegment
-                    End="25,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25,10"
-                    Point2="25,14"
-                    Point3="29,14" />
-                  <mssgle:LineSegment
-                    End="42.5,14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\LoadSales\calculate total"
-          TopLeft="607,134" />
         <EdgeLayout
           Id="Package\LoadSales.Paths[Salida de columna derivada2]"
           TopLeft="732.5,111">
@@ -3169,31 +3099,31 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\LoadSales.Paths[Salida de columna derivada3]"
-          TopLeft="607,155">
+          Id="Package\LoadSales.Paths[Salida de columna derivada1]"
+          TopLeft="614,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-263,10"
+              EndConnector="50,14"
               Start="0,0"
-              End="-255.5,10">
+              End="42.5,14">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-127.5,0" />
+                    End="21,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-127.5,0"
-                    Point2="-131.5,0"
-                    Point3="-131.5,4" />
+                    Point1="21,0"
+                    Point2="25,0"
+                    Point3="25,4" />
                   <mssgle:LineSegment
-                    End="-131.5,6" />
+                    End="25,10" />
                   <mssgle:CubicBezierSegment
-                    Point1="-131.5,6"
-                    Point2="-131.5,10"
-                    Point3="-135.5,10" />
+                    Point1="25,10"
+                    Point2="25,14"
+                    Point3="29,14" />
                   <mssgle:LineSegment
-                    End="-255.5,10" />
+                    End="42.5,14" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3202,11 +3132,81 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoadSales.Paths[Salida de columna derivada]"
+          TopLeft="374,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76,-16"
+              Start="0,0"
+              End="68.5,-16">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34,0"
+                    Point2="38,0"
+                    Point3="38,-4" />
+                  <mssgle:LineSegment
+                    End="38,-12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38,-12"
+                    Point2="38,-16"
+                    Point3="42,-16" />
+                  <mssgle:LineSegment
+                    End="68.5,-16" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoadSales.Paths[bad]"
+          TopLeft="498.666666666667,368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.333333333333,47"
+              Start="0,0"
+              End="126.333333333333,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0614136732329" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0614136732329"
+                    Point2="0,19.0614136732329"
+                    Point3="4,19.0614136732329" />
+                  <mssgle:LineSegment
+                    End="122.333333333333,19.0614136732329" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.333333333333,19.0614136732329"
+                    Point2="126.333333333333,19.0614136732329"
+                    Point3="126.333333333333,23.0614136732329" />
+                  <mssgle:LineSegment
+                    End="126.333333333333,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="54.6770572916667,24.0614136732329,16.97921875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\LoadSales\lookupEmployee">
+    design-time-name="Package\LoadSales\lookupProduct">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3216,13 +3216,21 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimEmployee]</Value>
+          type="q3:string">[dbo].[DimProduct]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoadSales\Stage order">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -3252,19 +3260,6 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\LoadSales\Sales bulk">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\LoadSales\lookupCustomer">
     <Properties>
       <Property>
@@ -3276,52 +3271,6 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LoadSales\lookupProduct">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimProduct]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LoadSales\lookupTime">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTime]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -3347,8 +3296,59 @@ inner join  [dbo].[StageProvider] as prov on (prod.ProveedorID=prov.ProveedorID)
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\LoadSales\Stage order">
+    design-time-name="Package\LoadSales\Sales bulk">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoadSales\lookupTime">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoadSales\lookupEmployee">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimEmployee]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

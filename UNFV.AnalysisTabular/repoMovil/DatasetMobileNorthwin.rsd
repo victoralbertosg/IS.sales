@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>/demoReporting/DataSourceMobileAnalysService</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('DimProduct'[Description], 'DimTime'[yearDT], 'DimTime'[monthDT], 'metas'[nameMonth], 'DimTime'[dateDT], ".metaSales", [.metaSales], ".SalesAmount", [.SalesAmount], ".sales_Previous_Month", [.sales_Previous_Month], ".sales_Previous_year", [.sales_Previous_year], ".SalesAggregateYear", [.SalesAggregateYear])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>DimProduct</DimensionName>
+                    <HierarchyName>Description</HierarchyName>
+                    <HierarchyUniqueName>[DimProduct].[Description]</HierarchyUniqueName>
+                    <LevelName>Description</LevelName>
+                    <UniqueName>[DimProduct].[Description].[Description]</UniqueName>
+                  </ID>
+                  <ItemCaption>Description</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>DimTime</DimensionName>
+                    <HierarchyName>yearDT</HierarchyName>
+                    <HierarchyUniqueName>[DimTime].[yearDT]</HierarchyUniqueName>
+                    <LevelName>yearDT</LevelName>
+                    <UniqueName>[DimTime].[yearDT].[yearDT]</UniqueName>
+                  </ID>
+                  <ItemCaption>yearDT</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>DimTime</DimensionName>
+                    <HierarchyName>monthDT</HierarchyName>
+                    <HierarchyUniqueName>[DimTime].[monthDT]</HierarchyUniqueName>
+                    <LevelName>monthDT</LevelName>
+                    <UniqueName>[DimTime].[monthDT].[monthDT]</UniqueName>
+                  </ID>
+                  <ItemCaption>monthDT</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>metas</DimensionName>
+                    <HierarchyName>nameMonth</HierarchyName>
+                    <HierarchyUniqueName>[metas].[nameMonth]</HierarchyUniqueName>
+                    <LevelName>nameMonth</LevelName>
+                    <UniqueName>[metas].[nameMonth].[nameMonth]</UniqueName>
+                  </ID>
+                  <ItemCaption>nameMonth</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>DimTime</DimensionName>
+                    <HierarchyName>dateDT</HierarchyName>
+                    <HierarchyUniqueName>[DimTime].[dateDT]</HierarchyUniqueName>
+                    <LevelName>dateDT</LevelName>
+                    <UniqueName>[DimTime].[dateDT].[dateDT]</UniqueName>
+                  </ID>
+                  <ItemCaption>dateDT</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>.metaSales</MeasureName>
+                    <UniqueName>[Measures].[.metaSales]</UniqueName>
+                  </ID>
+                  <ItemCaption>.metaSales</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>.SalesAmount</MeasureName>
+                    <UniqueName>[Measures].[.SalesAmount]</UniqueName>
+                  </ID>
+                  <ItemCaption>.SalesAmount</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>.sales_Previous_Month</MeasureName>
+                    <UniqueName>[Measures].[.sales_Previous_Month]</UniqueName>
+                  </ID>
+                  <ItemCaption>.sales_Previous_Month</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>.sales_Previous_year</MeasureName>
+                    <UniqueName>[Measures].[.sales_Previous_year]</UniqueName>
+                  </ID>
+                  <ItemCaption>.sales_Previous_year</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>.SalesAggregateYear</MeasureName>
+                    <UniqueName>[Measures].[.SalesAggregateYear]</UniqueName>
+                  </ID>
+                  <ItemCaption>.SalesAggregateYear</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Model</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('DimProduct'[Description], 'DimTime'[yearDT], 'DimTime'[monthDT], 'metas'[nameMonth], 'DimTime'[dateDT], ".metaSales", [.metaSales], ".SalesAmount", [.SalesAmount], ".sales_Previous_Month", [.sales_Previous_Month], ".sales_Previous_year", [.sales_Previous_year], ".SalesAggregateYear", [.SalesAggregateYear])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Description">
+        <DataField>DimProduct[Description]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="yearDT">
+        <DataField>DimTime[yearDT]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="monthDT">
+        <DataField>DimTime[monthDT]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nameMonth">
+        <DataField>metas[nameMonth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="dateDT">
+        <DataField>DimTime[dateDT]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_metaSales">
+        <DataField>[.metaSales]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID_SalesAmount">
+        <DataField>[.SalesAmount]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID_sales_Previous_Month">
+        <DataField>[.sales_Previous_Month]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID_sales_Previous_year">
+        <DataField>[.sales_Previous_year]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID_SalesAggregateYear">
+        <DataField>[.SalesAggregateYear]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+  <rd:ReportServerUrl>http://jav05jlinfvsoto/ReportServer</rd:ReportServerUrl>
+</SharedDataSet>

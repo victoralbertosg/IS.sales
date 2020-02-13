@@ -624,44 +624,6 @@
             "dataType": "int64",
             "sourceColumn": "dayDT",
             "sourceProviderType": "Integer"
-          },
-          {
-            "name": "RowIsCurrent",
-            "dataType": "string",
-            "sourceColumn": "RowIsCurrent",
-            "sourceProviderType": "WChar"
-          },
-          {
-            "name": "RowStartDate",
-            "dataType": "dateTime",
-            "sourceColumn": "RowStartDate",
-            "formatString": "General Date",
-            "sourceProviderType": "DBDate"
-          },
-          {
-            "name": "RowEndDate",
-            "dataType": "dateTime",
-            "sourceColumn": "RowEndDate",
-            "formatString": "General Date",
-            "sourceProviderType": "DBDate"
-          },
-          {
-            "name": "RowChangeReason",
-            "dataType": "string",
-            "sourceColumn": "RowChangeReason",
-            "sourceProviderType": "WChar"
-          },
-          {
-            "name": "InsertAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "InsertAuditKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "UpdateAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "UpdateAuditKey",
-            "sourceProviderType": "Integer"
           }
         ],
         "partitions": [
@@ -760,16 +722,19 @@
             "sourceProviderType": "Single"
           },
           {
-            "name": "InsertAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "InsertAuditKey",
-            "sourceProviderType": "Integer"
+            "name": "SubTotal",
+            "dataType": "double",
+            "sourceColumn": "SubTotal"
           },
           {
-            "name": "UpdateAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "UpdateAuditKey",
-            "sourceProviderType": "Integer"
+            "name": "IGV",
+            "dataType": "double",
+            "sourceColumn": "IGV"
+          },
+          {
+            "name": "Total",
+            "dataType": "double",
+            "sourceColumn": "Total"
           }
         ],
         "partitions": [
@@ -777,19 +742,25 @@
             "name": "Sales",
             "dataView": "full",
             "source": {
-              "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
+              "query": "SELECT [dbo].[Sales].* FROM [dbo].[Sales]",
               "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
-            }
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [dbo].[Sales].* FROM [dbo].[Sales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
           }
         ],
         "measures": [
           {
             "name": ".SalesAmount",
-            "expression": "SUMX(Sales, Sales[Quantity]* Sales[UnitPrice])"
+            "expression": "SUM(Sales[Total])"
           },
           {
             "name": ".SalesAmountAvg",
-            "expression": "AVERAGEX(Sales, Sales[Quantity]* Sales[UnitPrice])"
+            "expression": "AVERAGE(Sales[Total])"
           },
           {
             "name": ".SalesAggregateMonth",
@@ -816,16 +787,15 @@
             "expression": "CALCULATE(Sales[.SalesAmount],PREVIOUSMONTH(DimTime[dateDT]))"
           },
           {
-            "name": ".KPIsales",
+            "name": ".KPIsalesVsSalesPreviosYear",
             "expression": "Sales[.SalesAmount]",
             "kpi": {
               "targetExpression": "'Sales'[.sales_Previous_year]",
-              "statusGraphic": "Three Symbols UnCircled Colored",
               "statusExpression": [
-                "var x='Sales'[.KPIsales]/'Sales'[_.KPIsales Goal] return",
+                "var x='Sales'[.KPIsalesVsSalesPreviosYear]/'Sales'[_.KPIsalesVsSalesPreviosYear Goal] return",
                 "            if(ISBLANK(x),BLANK(),",
-                "                    If(x<0.35,-1,",
-                "\t                If(x<0.73,0,1)",
+                "                    If(x<0.33,-1,",
+                "\t                If(x<0.66,0,1)",
                 "                )",
                 "            )",
                 "            "
@@ -853,11 +823,109 @@
                 },
                 {
                   "name": "KpiThreshold_0",
-                  "value": "35"
+                  "value": "33"
                 },
                 {
                   "name": "KpiThreshold_1",
-                  "value": "73"
+                  "value": "66"
+                }
+              ]
+            }
+          },
+          {
+            "name": ".%SalesVsMetas",
+            "expression": "DIVIDE(Sales[.SalesAmount],metas[.metaSales])"
+          },
+          {
+            "name": ".kpiSalesVsMeta",
+            "expression": "Sales[.SalesAmount]",
+            "kpi": {
+              "targetExpression": "'metas'[.metaSales]",
+              "statusGraphic": "Three Symbols UnCircled Colored",
+              "statusExpression": [
+                "var x='Sales'[.kpiSalesVsMeta]/'Sales'[_.kpiSalesVsMeta Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.65,-1,",
+                "\t                If(x<1.04,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "65"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "104"
+                }
+              ]
+            }
+          },
+          {
+            "name": ".kpiSalesVsSalesPrviousMonth",
+            "expression": "Sales[.SalesAmount]",
+            "kpi": {
+              "targetExpression": "'Sales'[.sales_Previous_Month]",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='Sales'[.kpiSalesVsSalesPrviousMonth]/'Sales'[_.kpiSalesVsSalesPrviousMonth Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.4,-1,",
+                "\t                If(x<0.8,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "40"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "80"
                 }
               ]
             }
@@ -866,7 +934,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] "
+            "value": "SELECT [dbo].[Sales].* FROM [dbo].[Sales]"
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -875,6 +943,10 @@
           {
             "name": "_TM_ExtProp_DbSchemaName",
             "value": "dbo"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [dbo].[Sales].* FROM [dbo].[Sales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
           }
         ]
       },
@@ -1038,6 +1110,152 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "metas",
+        "columns": [
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "dateDT",
+            "dataType": "dateTime",
+            "sourceColumn": "dateDT",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "monthDT",
+            "dataType": "string",
+            "sourceColumn": "monthDT",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "nameMonth",
+            "dataType": "string",
+            "sourceColumn": "nameMonth",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Total",
+            "dataType": "double",
+            "sourceColumn": "Total",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "MetaSales",
+            "dataType": "double",
+            "sourceColumn": "MetaSales",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "sourceColumn": "ProductKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "dateKey",
+            "dataType": "int64",
+            "sourceColumn": "dateKey",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "metas",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "select ",
+                "prod.Description, ",
+                "t.dateDT,",
+                "t.monthDT,",
+                "DATENAME(mm,(t.dateDT)) as nameMonth,",
+                "s.Total,",
+                "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+                "prod.ProductKey,",
+                "s.dateKey",
+                "from [dbo].[Sales] s",
+                "inner join [dbo].[DimProduct] prod on  s.productKey=prod.ProductKey",
+                "inner join [dbo].[DimTime] t on s.dateKey=t.TimeKey"
+              ],
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+                  "prod.Description, ",
+                  "t.dateDT,",
+                  "t.monthDT,",
+                  "DATENAME(mm,(t.dateDT)) as nameMonth,",
+                  "s.Total,",
+                  "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+                  "prod.ProductKey,",
+                  "s.dateKey",
+                  "from [dbo].[Sales] s",
+                  "inner join [dbo].[DimProduct] prod on  s.productKey=prod.ProductKey",
+                  "inner join [dbo].[DimTime] t on s.dateKey=t.TimeKey</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": ".metaSales",
+            "expression": "SUM(metas[MetaSales])"
+          },
+          {
+            "name": ".TotalSales",
+            "expression": "SUM(metas[Total])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select ",
+              "prod.Description, ",
+              "t.dateDT,",
+              "t.monthDT,",
+              "DATENAME(mm,(t.dateDT)) as nameMonth,",
+              "s.Total,",
+              "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+              "prod.ProductKey,",
+              "s.dateKey",
+              "from [dbo].[Sales] s",
+              "inner join [dbo].[DimProduct] prod on  s.productKey=prod.ProductKey",
+              "inner join [dbo].[DimTime] t on s.dateKey=t.TimeKey"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "metas"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+              "prod.Description, ",
+              "t.dateDT,",
+              "t.monthDT,",
+              "DATENAME(mm,(t.dateDT)) as nameMonth,",
+              "s.Total,",
+              "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+              "prod.ProductKey,",
+              "s.dateKey",
+              "from [dbo].[Sales] s",
+              "inner join [dbo].[DimProduct] prod on  s.productKey=prod.ProductKey",
+              "inner join [dbo].[DimTime] t on s.dateKey=t.TimeKey</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
       }
     ],
     "relationships": [
@@ -1075,6 +1293,20 @@
         "fromColumn": "customerKey",
         "toTable": "DimCustomer",
         "toColumn": "CustomerKey"
+      },
+      {
+        "name": "3023e483-fec9-4b6f-80ef-79a0f6332353",
+        "fromTable": "metas",
+        "fromColumn": "ProductKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "d9c6d070-03b0-47ab-92f5-1cc1b6cf67fc",
+        "fromTable": "metas",
+        "fromColumn": "dateKey",
+        "toTable": "DimTime",
+        "toColumn": "TimeKey"
       }
     ],
     "annotations": [
