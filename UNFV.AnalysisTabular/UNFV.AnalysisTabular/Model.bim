@@ -929,6 +929,14 @@
                 }
               ]
             }
+          },
+          {
+            "name": ".salesPrevious-1",
+            "expression": "CALCULATE(Sales[.SalesAmount],DATEADD(DimTime[dateDT],-1,YEAR))"
+          },
+          {
+            "name": ".salesPrevious-2",
+            "expression": "CALCULATE(Sales[.SalesAmount],DATEADD(DimTime[dateDT],-2,YEAR))"
           }
         ],
         "annotations": [
@@ -947,167 +955,6 @@
           {
             "name": "QueryEditorSerialization",
             "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [dbo].[Sales].* FROM [dbo].[Sales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
-          }
-        ]
-      },
-      {
-        "name": "Sales 1",
-        "columns": [
-          {
-            "name": "SalesKey",
-            "dataType": "int64",
-            "sourceColumn": "SalesKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "ordenID",
-            "dataType": "int64",
-            "sourceColumn": "ordenID",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "customerKey",
-            "dataType": "int64",
-            "sourceColumn": "customerKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "employeeKey",
-            "dataType": "int64",
-            "sourceColumn": "employeeKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "providerKey",
-            "dataType": "int64",
-            "sourceColumn": "providerKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "dateKey",
-            "dataType": "int64",
-            "sourceColumn": "dateKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "productKey",
-            "dataType": "int64",
-            "sourceColumn": "productKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "UnitPrice",
-            "dataType": "decimal",
-            "sourceColumn": "UnitPrice",
-            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
-            "sourceProviderType": "Currency",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Quantity",
-            "dataType": "int64",
-            "sourceColumn": "Quantity",
-            "sourceProviderType": "SmallInt"
-          },
-          {
-            "name": "Discount",
-            "dataType": "double",
-            "sourceColumn": "Discount",
-            "sourceProviderType": "Single"
-          },
-          {
-            "name": "SubTotal",
-            "dataType": "decimal",
-            "sourceColumn": "SubTotal",
-            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
-            "sourceProviderType": "Currency",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "IGV",
-            "dataType": "decimal",
-            "sourceColumn": "IGV",
-            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
-            "sourceProviderType": "Currency",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Total",
-            "dataType": "decimal",
-            "sourceColumn": "Total",
-            "formatString": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\"",
-            "sourceProviderType": "Currency",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"3082\" DisplayName=\"€ Spanish (Spain)\" Symbol=\"€\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "InsertAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "InsertAuditKey",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "UpdateAuditKey",
-            "dataType": "int64",
-            "sourceColumn": "UpdateAuditKey",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Sales 1",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] ",
-              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": ".SalesAmount1",
-            "expression": "SUM('Sales 1'[Total])"
-          },
-          {
-            "name": ".sales_Previous_year1",
-            "expression": "CALCULATE('Sales 1'[.SalesAmount1],PREVIOUSYEAR(DimTime[dateDT]))"
-          },
-          {
-            "name": ".SalesAggregateYear1",
-            "expression": "TOTALYTD('Sales 1'[.SalesAmount1],DimTime[dateDT])"
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Sales].* FROM [dbo].[Sales] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Sales"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
           }
         ]
       },
@@ -1176,7 +1023,7 @@
                 "t.monthDT,",
                 "DATENAME(mm,(t.dateDT)) as nameMonth,",
                 "s.Total,",
-                "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+                "s.total * floor(rand()*(30-1)+1)/10 as MetaSales,",
                 "prod.ProductKey,",
                 "s.dateKey",
                 "from [dbo].[Sales] s",
@@ -1195,7 +1042,7 @@
                   "t.monthDT,",
                   "DATENAME(mm,(t.dateDT)) as nameMonth,",
                   "s.Total,",
-                  "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+                  "s.total * floor(rand()*(30-1)+1)/10 as MetaSales,",
                   "prod.ProductKey,",
                   "s.dateKey",
                   "from [dbo].[Sales] s",
@@ -1214,6 +1061,10 @@
           {
             "name": ".TotalSales",
             "expression": "SUM(metas[Total])"
+          },
+          {
+            "name": ".%salesVsMeta",
+            "expression": "DIVIDE(Sales[.SalesAmount],metas[.metaSales])"
           }
         ],
         "annotations": [
@@ -1226,7 +1077,7 @@
               "t.monthDT,",
               "DATENAME(mm,(t.dateDT)) as nameMonth,",
               "s.Total,",
-              "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+              "s.total * floor(rand()*(30-1)+1)/10 as MetaSales,",
               "prod.ProductKey,",
               "s.dateKey",
               "from [dbo].[Sales] s",
@@ -1247,7 +1098,7 @@
               "t.monthDT,",
               "DATENAME(mm,(t.dateDT)) as nameMonth,",
               "s.Total,",
-              "s.total * floor(rand()*(13-1)+1)/10 as MetaSales,",
+              "s.total * floor(rand()*(30-1)+1)/10 as MetaSales,",
               "prod.ProductKey,",
               "s.dateKey",
               "from [dbo].[Sales] s",
