@@ -1107,6 +1107,110 @@
             ]
           }
         ]
+      },
+      {
+        "name": "factMetas",
+        "columns": [
+          {
+            "name": "dateDT",
+            "dataType": "dateTime",
+            "sourceColumn": "dateDT",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "yearDT",
+            "dataType": "int64",
+            "sourceColumn": "yearDT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "monthDT",
+            "dataType": "string",
+            "sourceColumn": "monthDT",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "dayDT",
+            "dataType": "int64",
+            "sourceColumn": "dayDT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "metaMount",
+            "dataType": "double",
+            "sourceColumn": "metaMount",
+            "sourceProviderType": "Decimal"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Query",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "      [dateDT]",
+                "      ,[yearDT]",
+                "      ,[monthDT]",
+                "      ,[dayDT]",
+                "      ,[metaMount]",
+                "  FROM [NorthwindDataMart].[dbo].[FacMeta]"
+              ],
+              "dataSource": "SqlServer JAV05JLINFVSOTO NorthwindDataMart"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "      [dateDT]",
+                  "      ,[yearDT]",
+                  "      ,[monthDT]",
+                  "      ,[dayDT]",
+                  "      ,[metaMount]",
+                  "  FROM [NorthwindDataMart].[dbo].[FacMeta]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": ".metaMount",
+            "expression": "SUM(factMetas[metaMount])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "      [dateDT]",
+              "      ,[yearDT]",
+              "      ,[monthDT]",
+              "      ,[dayDT]",
+              "      ,[metaMount]",
+              "  FROM [NorthwindDataMart].[dbo].[FacMeta]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Query"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "      [dateDT]",
+              "      ,[yearDT]",
+              "      ,[monthDT]",
+              "      ,[dayDT]",
+              "      ,[metaMount]",
+              "  FROM [NorthwindDataMart].[dbo].[FacMeta]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
       }
     ],
     "relationships": [

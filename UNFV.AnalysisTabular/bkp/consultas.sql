@@ -23,5 +23,16 @@ group by dt.yearDT,monthDT
 
 truncate table [dbo].[FacMeta]
 
-update [dbo].[FacMeta] set [dateDT]=convert(datetime,(convert(varchar(10),dayDT)) +'/'+convert(varchar(10),monthDT)+'/'+convert(varchar(10),yearDT))
- 
+update [dbo].[FacMeta] set  [dateDT]=convert(datetime,(convert(varchar(10),dayDT)) +'/'+convert(varchar(10),monthDT)+'/'+convert(varchar(10),yearDT))
+
+update [dbo].[FacMeta] set  [monthKey]=convert(int,convert(varchar(10),monthDT)+convert(varchar(10),yearDT))
+ select  convert(int,convert(varchar(10),monthDT)+convert(varchar(10),yearDT)) from [dbo].[FacMeta]
+
+
+ CREATE TABLE [dbo].[FacMeta](	
+	monthkey as convert(int,convert(varchar(10),monthDT)+convert(varchar(10),yearDT)) ,
+	[dateDT] [datetime]  NULL,	
+	[yearDT] [int] not NULL,
+	[monthDT] [varchar](20) not NULL,
+	[dayDT] [int] NULL,
+	[metaMount] [money] NULL)
